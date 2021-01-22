@@ -1,11 +1,10 @@
-package com.example.myannonces
+package com.example.myannonces.activities
 
-import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcel
 import android.os.Parcelable
-import android.view.Window
+import com.example.myannonces.R
 
 class MainActivity() : AppCompatActivity(), Parcelable {
     constructor(parcel: Parcel) : this() {

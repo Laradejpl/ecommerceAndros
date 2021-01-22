@@ -1,4 +1,4 @@
-package com.example.myannonces
+package com.example.myannonces.activities
 
 import android.content.Context
 import android.graphics.Typeface
