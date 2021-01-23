@@ -14,7 +14,7 @@ class MSPTextViewBold(context: Context, attrs: AttributeSet) : AppCompatTextView
     private fun applyFont(){
         val boldTypeface : Typeface =
 
-                Typeface.createFromAsset(context.assets,"Montserrat-Regular.ttf")
+                Typeface.createFromAsset(context.assets,"Montserrat-Bold.ttf")
         typeface = boldTypeface
 
     }
