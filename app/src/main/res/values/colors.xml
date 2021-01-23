@@ -11,6 +11,8 @@
     <color name="limePrimary">#76FF03</color>
     <color name="redPrimary">#ff0734</color>
     <color name="orangePrimary">#FF3D00</color>
+    <color name="colorSnackBarSuccess">#8BC34A</color>
+    <color name="colorSnackBarError">#F72400</color>
 
 
 
