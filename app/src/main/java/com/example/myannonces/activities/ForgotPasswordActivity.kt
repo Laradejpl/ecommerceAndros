@@ -39,7 +39,7 @@ class ForgotPasswordActivity : BaseActivity() {
                         // Hide the progress dialog
                         hideProgressDialog()
 
-                         if (task.isSuccessful) {
+                        if (task.isSuccessful) {
                             // Show the toast message and finish the forgot password activity to go back to the login screen.
                             Toast.makeText(
                                 this@ForgotPasswordActivity,
