@@ -29,6 +29,11 @@ class RegisterActivity : BaseActivity()  {
 
 
 
+
+
+
+
+
         tv_login.setOnClickListener {
 
             // Launch the register screen when the user clicks on the text.

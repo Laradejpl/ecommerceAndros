@@ -31,7 +31,7 @@
             android:contentDescription="@string/app_name"
             android:scaleType="fitCenter"
             android:src="@drawable/tutorials_eu_logo"
-            app:tint="@color/white" />
+             />
     </FrameLayout>
 
     <com.example.myannonces.utils.MSPTextViewBold
@@ -62,6 +62,7 @@
 
         <com.example.myannonces.utils.MSPEditText
             android:id="@+id/et_email"
+            android:background="@color/colorgris"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -87,6 +88,7 @@
 
         <com.example.myannonces.utils.MSPEditText
             android:id="@+id/et_password"
+            android:background="@color/colorgris"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
