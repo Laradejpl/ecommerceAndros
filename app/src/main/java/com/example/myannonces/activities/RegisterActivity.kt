@@ -4,7 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.WindowManager
+import android.widget.Toast
 import com.example.myannonces.R
+import com.example.myannonces.firestore.FirestoreClass
+import com.example.myannonces.models.User
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -25,12 +28,6 @@ class RegisterActivity : BaseActivity()  {
 
 
         setContentView(R.layout.activity_register);
-
-
-
-
-
-
 
 
 
@@ -106,7 +103,7 @@ class RegisterActivity : BaseActivity()  {
                     .addOnCompleteListener(
                             OnCompleteListener<AuthResult> { task ->
 
-                                hideProgressDialog()
+
 
                                 // If the registration is successfully done
                                 if (task.isSuccessful) {
@@ -114,23 +111,51 @@ class RegisterActivity : BaseActivity()  {
                                     // Firebase registered user
                                     val firebaseUser: FirebaseUser = task.result!!.user!!
 
-                                    showErrorSnackBar(
-                                            "You are registered successfully. Your user id is ${firebaseUser.uid}",
-                                            false
+                                    val user = User(
+                                        firebaseUser.uid,
+                                        et_first_name.text.toString().trim { it <= ' ' },
+                                        et_last_name.text.toString().trim { it <= ' ' },
+                                        et_email.text.toString().trim { it <= ' ' }
                                     )
+
+                                    FirestoreClass().registerUser(this@RegisterActivity, user)
+
                                      // une fois quil est enregistrer ont enleve de sa vue cette activité register
-                                    FirebaseAuth.getInstance().signOut()
+                                    //FirebaseAuth.getInstance().signOut()
                                     // Finish the Register Screen
-                                    finish()
+                                    //finish()
 
 
                                 } else {
+                                    hideProgressDialog()
                                     // If the registering is not successful then show error message.
                                     showErrorSnackBar(task.exception!!.message.toString(), true)
                                 }
                             })
         }
     }
+    fun userRegistrationSuccess() {
+
+        // Hide the progress dialog
+        hideProgressDialog()
+
+        // TODO Step 5: Replace the success message to the Toast instead of Snackbar.
+        Toast.makeText(
+            this@RegisterActivity,
+            resources.getString(R.string.register_success),
+            Toast.LENGTH_SHORT
+        ).show()
+
+
+        /**
+         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
+         * and send him to Intro Screen for Sign-In
+         */
+        FirebaseAuth.getInstance().signOut()
+        // Finish the Register Screen
+        finish()
+    }
+    // END
 
 
 }
