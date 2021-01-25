@@ -14,6 +14,10 @@
     <color name="colorSnackBarSuccess">#8BC34A</color>
     <color name="colorSnackBarError">#F72400</color>
     <color name="colorgris">#e8f6f9</color>
+    <color name="colorSecondaryText">#989898</color>
+    <color name="colorLightGrey">#F1F1F1</color>
+    <color name="colorThemePink">#ED2173</color>
+    <color name="colorThemeOrange">#F4442d</color>
 
 
 

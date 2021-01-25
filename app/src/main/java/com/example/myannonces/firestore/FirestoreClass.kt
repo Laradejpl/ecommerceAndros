@@ -1,6 +1,8 @@
 package com.example.myannonces.firestore
 
 import android.app.Activity
+import android.content.Context
+import android.content.SharedPreferences
 import android.util.Log
 import com.example.myannonces.activities.LoginActivity
 import com.example.myannonces.activities.RegisterActivity
@@ -70,6 +72,22 @@ class FirestoreClass {
 
                     // Here we have received the document snapshot which is converted into the User Data model object.
                     val user = document.toObject(User::class.java)!!
+
+
+                    val sharedPreferences =
+                            activity.getSharedPreferences(
+                                    Constants.MYSHOPPAL_PREFERENCES,
+                                    Context.MODE_PRIVATE
+                            )
+                     //key:value LOGGED_IN_USERNAME:le prenom et nom
+                    
+                    // Create an instance of the editor which is help us to edit the SharedPreference.
+                    val editor: SharedPreferences.Editor = sharedPreferences.edit()
+                    editor.putString(
+                            Constants.LOGGED_IN_USERNAME,
+                            "${user.firstName} ${user.lastName}"
+                    )
+                    editor.apply()
 
                     // TODO Step 6: Pass the result to the Login Activity.
                     // START
