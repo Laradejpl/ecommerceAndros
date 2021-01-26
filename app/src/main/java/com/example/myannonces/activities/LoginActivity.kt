@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myannonces.R
 import com.example.myannonces.firestore.FirestoreClass
 import com.example.myannonces.models.User
+import com.example.myannonces.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -147,6 +148,11 @@ import kotlinx.android.synthetic.main.activity_login.*
          if (user.profileCompleted == 0) {
              // If the user profile is incomplete then launch the UserProfileActivity.
              val intent = Intent(this@LoginActivity, UserProfileActivity::class.java)
+
+             // TODO Step 4: Pass the user details to the user profile screen.
+             // START
+             intent.putExtra(Constants.EXTRA_USER_DETAILS, user)
+             // END
              startActivity(intent)
          } else {
              // Redirect the user to Main Screen after log in.
