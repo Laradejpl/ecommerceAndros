@@ -2,7 +2,6 @@ package com.example.myannonces.activities
 
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.example.myannonces.R
 import com.google.android.material.snackbar.Snackbar

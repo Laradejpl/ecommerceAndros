@@ -1,4 +1,4 @@
-package com.myshoppal.utils
+package com.example.myannonces.utils
 
 import android.content.Context
 import android.net.Uri
@@ -34,4 +34,3 @@ class GlideLoader(val context: Context) {
     }
     // END
 }
-// END
