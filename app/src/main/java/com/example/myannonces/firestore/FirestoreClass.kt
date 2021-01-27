@@ -162,8 +162,6 @@ class FirestoreClass {
             }
     }
 
-    // TODO Step 6: Create a function to upload the image to the Cloud Storage.
-    // START
     // A function to upload the image to the cloud storage.
     fun uploadImageToCloudStorage(activity: Activity, imageFileURI: Uri?) {
 
@@ -190,15 +188,12 @@ class FirestoreClass {
                     .addOnSuccessListener { uri ->
                         Log.e("Downloadable Image URL", uri.toString())
 
-                        // TODO Step 8: Pass the success result to base class.
-                        // START
                         // Here call a function of base activity for transferring the result to it.
                         when (activity) {
                             is UserProfileActivity -> {
                                 activity.imageUploadSuccess(uri.toString())
                             }
                         }
-                        // END
                     }
             }
             .addOnFailureListener { exception ->
@@ -217,5 +212,4 @@ class FirestoreClass {
                 )
             }
     }
-    // END
 }

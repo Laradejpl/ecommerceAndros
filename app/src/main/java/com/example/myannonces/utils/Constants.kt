@@ -26,7 +26,7 @@ object Constants {
     const val READ_STORAGE_PERMISSION_CODE = 2
 
     // A unique code of image selection from Phone Storage.
-    const val PICK_IMAGE_REQUEST_CODE = 1
+    const val PICK_IMAGE_REQUEST_CODE = 2
 
     // Constant variables for Gender
     const val MALE: String = "Male"
@@ -35,11 +35,12 @@ object Constants {
     // Firebase database field names
     const val MOBILE: String = "mobile"
     const val GENDER: String = "gender"
-
-    // TODO Step 4: Create a constant variable for User Profile Image.
+    // TODO Step 6: Create a constant variable for user profile image field.
     // START
-    const val USER_PROFILE_IMAGE:String = "User_Profile_Image"
+    const val IMAGE: String = "image"
     // END
+
+    const val USER_PROFILE_IMAGE:String = "User_Profile_Image"
 
 
     /**
@@ -55,8 +56,6 @@ object Constants {
         activity.startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST_CODE)
     }
 
-    // TODO Step 5: Create a function to get the extension of the selected image file.
-    // START
     /**
      * A function to get the image file extension of the selected image.
      *
@@ -76,5 +75,4 @@ object Constants {
         return MimeTypeMap.getSingleton()
             .getExtensionFromMimeType(activity.contentResolver.getType(uri!!))
     }
-    // END
 }
