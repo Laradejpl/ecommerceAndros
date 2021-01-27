@@ -10,6 +10,8 @@ import kotlinx.android.synthetic.main.dialog_progress.*
 
 open class  BaseActivity : AppCompatActivity() {
 
+
+
     private lateinit var mProgressDialog: Dialog
 
 

@@ -77,15 +77,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/profile_user_photo_margin"
-                    android:background="@color/colorgris"
+                    android:background="@color/colorLightGrey"
                     android:contentDescription="@string/content_description"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_user_placeholder" />
 
-                <View
-                    android:layout_width="149dp"
-                    android:layout_height="146dp"
-                    android:background="@drawable/user_image_background" />
+
 
 
 
