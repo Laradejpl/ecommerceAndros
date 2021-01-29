@@ -1,4 +1,4 @@
-package com.example.myannonces.ui.fragments.activities
+package com.example.myannonces.ui.activities
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

@@ -1,4 +1,4 @@
-package com.example.myannonces.ui.fragments.activities
+package com.example.myannonces.ui.activities
 
 import android.app.Dialog
 import android.os.Handler

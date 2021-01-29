@@ -1,4 +1,4 @@
-package com.example.myannonces.ui.fragments.activities
+package com.example.myannonces.ui.activities
 
 import android.Manifest
 import android.app.Activity
