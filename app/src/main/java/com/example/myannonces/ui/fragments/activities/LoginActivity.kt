@@ -1,4 +1,4 @@
- package com.example.myannonces.activities
+ package com.example.myannonces.ui.fragments.activities
 
 
 import android.content.Intent
@@ -8,7 +8,6 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 
-import androidx.appcompat.app.AppCompatActivity
 import com.example.myannonces.R
 import com.example.myannonces.firestore.FirestoreClass
 import com.example.myannonces.models.User

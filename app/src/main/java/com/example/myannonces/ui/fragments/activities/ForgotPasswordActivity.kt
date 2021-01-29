@@ -1,6 +1,5 @@
-package com.example.myannonces.activities
+package com.example.myannonces.ui.fragments.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Toast

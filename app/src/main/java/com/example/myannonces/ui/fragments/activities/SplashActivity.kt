@@ -1,4 +1,4 @@
-package com.example.myannonces.activities
+package com.example.myannonces.ui.fragments.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 
 import android.view.WindowManager
-import com.example.myannonces.DashboardActivity
 import com.example.myannonces.R
 import com.example.myannonces.firestore.FirestoreClass
 
@@ -35,7 +34,9 @@ class SplashActivity : AppCompatActivity() {
                 if (currentUserID.isNotEmpty()) {
                     // Launch dashboard screen.
                     startActivity(Intent(this@SplashActivity, DashboardActivity::class.java))
+
                 } else {
+
                     // Launch the Login Activity
                     startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
                 }

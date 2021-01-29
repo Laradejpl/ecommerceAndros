@@ -5,14 +5,14 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
-import com.example.myannonces.activities.LoginActivity
+import com.example.myannonces.ui.fragments.activities.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.example.myannonces.activities.RegisterActivity
-import com.example.myannonces.activities.UserProfileActivity
+import com.example.myannonces.ui.fragments.activities.RegisterActivity
+import com.example.myannonces.ui.fragments.activities.UserProfileActivity
 import com.example.myannonces.models.User
 import com.example.myannonces.utils.Constants
 
