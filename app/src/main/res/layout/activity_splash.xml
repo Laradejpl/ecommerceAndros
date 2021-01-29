@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    tools:context=".activities.SplashActivity">
+
+
+
+      <com.example.myannonces.activities.BoldTextView
+          android:id="@+id/tv_app"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="Annonces"
+          android:textColor="@color/ic_launcher_background"
+          android:textSize="60dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+
+          >
+
+      </com.example.myannonces.activities.BoldTextView>
+
+
+
+    <TextView
+        android:id="@+id/tv_titre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Vendez ce qui ne vous sert plus."
+       android:gravity="top"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:textColor="@color/ic_launcher_background"
+
+
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/copytitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=" @ larade jean-philippe"
+        android:gravity="bottom"
+        android:textSize="20dp"
+
+
+        >
+
+
+    </TextView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
